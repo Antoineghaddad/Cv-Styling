@@ -1,0 +1,436 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+hgroup{
+    position: relative;
+    margin-left:10vw;
+    margin-top:12vw;
+    top:90px;
+}
+hgroup h1::after{
+    content: "";
+    border-bottom:1px solid #a6a6a6;
+    width:80vw;
+    position: absolute;
+    top:10vh;
+    left:0;  
+}
+#experiences h3,#education h3{
+    margin-top:20px;
+}
+#experiences p,#education p{
+    width:60vw;
+}
+figure{
+    position: absolute;
+    top:37%;
+    left:69vw;
+    transform: rotate(-15deg);
+}
+.experience-institution{
+    display:none;
+}
+img{
+    width:200px;    
+}
+.skills-secondary{
+    grid-column-start: 2;
+    margin-top:5px;
+}
+#contact h3{
+    display:none;
+}
+.content{
+    display:grid;
+   grid-template-columns:1fr;
+   margin-top: 10%;
+   grid-gap: 10%;
+   max-width: 90%;
+   margin-left:10vw; 
+}
+#about h3,hgroup h2{
+    display:none;
+}
+#about{
+    color:#a6a6a6;
+    font-style: italic;
+    max-width:50vw;
+}
+#competencies .skills-secondary,#experiences .experience:nth-child(2),#education .experience:nth-child(2){
+grid-area: 2/2;
+}
+.skills-primary .skill{
+    margin-left:20px;
+    border:1px solid #008080;
+    background-color:#008080;
+    margin-top:10px;
+    height:45px;
+    width:13vw;
+    color:white;
+    font-size:21px;
+    margin-top:5px;  
+}
+.skills-secondary .skill{
+    margin-left:20px;
+    border:1px solid #008080;
+    background-color:#008080;
+    font-size:16px;
+    height:40px;
+    width:13vw;
+    color:white;
+}
+.skills span{
+    margin-left:2px;   
+}
+[data-skill="5"]:nth-child(1)::after{
+    content: "★★★";
+    margin-left: 3vw;
+}
+[data-skill="9"]::after{
+    content: "★★★★★";
+    margin-left:3vw;
+}
+[data-skill="7"]::after{
+    content: "★★★★";
+    margin-left: 2vw;
+}
+[data-skill="3"]::after{
+    content: "★★";
+    margin-left:6vw;
+}
+[data-skill="1"]::after{
+    content: "★";
+    margin-left:3vw;
+}
+[data-skill="5"]:nth-child(2)::after{
+    content: "★★★";
+    margin-left:6vw;
+}
+section#competencies,#education,#experiences,#hobbies{
+    display:grid;
+    grid-template-columns: 17% 1fr;
+    max-width: 100%;
+}
+.experience{
+    display:grid;
+    grid-template-columns: 60% 1fr;
+    grid-gap: 30px;   
+}
+.experience-date,.experience-location{
+    color:#a6a6a6;
+    position: relative;
+    top:60%;
+}
+.skills-primary{
+    display:flex;
+    flex-direction: row;
+}
+.skills-secondary{
+    display:flex;
+    flex-direction: row;
+}
+.experience-type{
+    color:#008080;   
+}
+#experiences{
+    position: relative;
+}
+#experiences > h3::after{
+    content: "";
+    border-right: 1px black solid;
+    height: 26vw;
+    position: absolute;
+    left: 13%;
+    top: 0;
+}
+
+#education h3::after{
+    content: "";
+    border-right: 1px black solid;
+    height: 26vw;
+    position: absolute;
+    left: 13%;
+    top: 0;
+}
+#education{
+    position: relative;
+    margin-top:10px;
+}
+.experience h4{
+    margin-top:25px;
+}
+#hobbies h3::after{
+    content: "";
+    border-right: 1px black solid;
+    height: 8vw;
+    position: absolute;
+    left: 13%;
+    top: 0;
+}
+#hobbies,#competencies{
+    position: relative;
+}
+#competencies > h3::after{
+    content: "";
+    border-right: 1px black solid;
+    height: 8vw;
+    position: absolute;
+    left: 13%;
+    top: 0;
+}
+#experiences h3,#education h3,#competencies h3,#hobbies h3{
+    font-style: italic;
+}
+.contact-email .contact-value a::before {
+    content: "";
+    background: url(../images/email.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left:70%;
+}
+ #contact a,.contact-value,.contact-type{
+      color:white;
+}
+.contact-phone a::before {
+    content: "";
+    background: url(../images/phone.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.contact-github a::before {
+    content: "";
+    background: url(../images/github.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.contact-facebook a::before {
+    content: "";
+    background: url(../images/facebook.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  
+}
+.contacts{
+    display:flex;
+    justify-content: flex-start;
+    padding-bottom:70px;
+}
+
+@media only screen and (max-width:600px){
+img{
+    display: none;
+}
+
+
+#about p{
+    margin-top:7vh;
+    width:60vh;
+    line-height: 1.2;
+    margin-left:30px;
+}
+hgroup h1::after{
+    content: "";
+    border-bottom:1px solid #a6a6a6;
+    width:80vw;
+    position: absolute;
+    top:6vh;
+    left:0;  
+}
+#competencies h3::after{
+  display:none;
+
+}
+#competencies h3{
+    border-bottom: 1px black solid;
+    width:25vw;
+}
+.skills-primary .skill{
+   
+    border:1px solid #008080;
+    background-color:#008080;
+    margin-top:10px;
+    height:35px;
+    width:25vw;
+    color:white;
+    font-size:19px;
+    margin-top:5px;  
+}
+.skills-secondary .skill{
+    
+    border:1px solid #008080;
+    background-color:#008080;
+    font-size:14px;
+    height:30px;
+    width:25vw;
+    color:white;
+}
+.skill>span{
+    margin-left:2px;
+    margin-top:10px;   
+}
+[data-skill="5"]:nth-child(1)::after{
+    content: "★★★";
+    margin-left: 5vw;
+}
+[data-skill="9"]::after{
+    content: "★★★★★";
+    margin-left:6vw;
+}
+[data-skill="7"]::after{
+    content: "★★★★";
+    margin-left: 3vw;
+}
+[data-skill="3"]::after{
+    content: "★★";
+    margin-left:10vw;
+}
+[data-skill="1"]::after{
+    content: "★";
+    margin-left:4vw;
+}
+[data-skill="5"]:nth-child(2)::after{
+    content: "★★★";
+    margin-left:12vw;
+}
+section#competencies{
+ display:flex;
+ flex-direction: column;
+}
+#competencies h3{
+    margin-left:15px;
+}
+
+div.skills{
+    margin-top:20px;
+}
+#experience h3::after{
+    content: "";
+    display:none;
+}
+.content{
+    margin-left:5vw;
+    grid-gap: 5%;
+   
+}
+#experiences > h3::after{
+   display:none;
+}
+
+#experiences{
+    display:flex;
+    flex-direction: column;
+}
+#experiences h3{
+    border-bottom: 1px black solid;
+    width:25vw;
+    margin-top:0;
+}
+#education h3::after{
+    content: "";
+  display:none;
+}
+#education h3{
+    border-bottom: 1px black solid;
+    width:25vw;
+    margin-top:0;
+}
+#education{
+    display:flex;
+    flex-direction: column;
+}
+#hobbies h3::after{
+    content: "";
+  display:none;
+}
+#hobbies h3{
+    border-bottom: 1px black solid;
+    width:25vw;
+}
+#hobbies{
+    display:flex;
+    flex-direction: column;
+}
+#hobbies ul{
+    margin-left:6vw;
+    margin-top:20px;
+}
+#experiences p{
+    width:87vw;
+    line-height: 1.3;
+}
+#education p{
+    width:87vw;
+    line-height: 1.3;
+}
+.contact-phone a::before {
+    content: "";
+    background: url(../images/phone.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.contact-github a::before {
+    content: "";
+    background: url(../images/github.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    left:20%;
+  
+}
+.contact-facebook a::before {
+    content: "";
+    background: url(../images/facebook.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    bottom:0;
+    left:0;
+  
+}
+.contact-email .contact-value a::before {
+    content: "";
+    background: url(../images/email.png);
+    background-size: cover;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left:0;
+}
+section#contact{
+    position:relative;
+    
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
